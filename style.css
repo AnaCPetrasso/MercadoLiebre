@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
-body{
-    background-color:#ebebeb ;
+body {
+    background-color: #ebebeb;
 }
+
 /* Paleta de colores
 Amarillo: #EAC926;
 Azul: #03264C;
@@ -23,29 +24,38 @@ Precios: 18px
 Descuentos: 16px
 Descripciones: 16px
 
-/* Tamaños de tipografia */ 
-p{
+/* Tipografias */
+p {
     font-size: 12px;
-} 
-h2{
-    font-size: 24px;
 }
-.price{
+
+h2 {
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+}
+
+.price {
     font-size: 18px;
 }
-.discaunt{
+
+.discount {
     font-size: 16px;
 }
-.description{
+
+.description {
     font-size: 16px;
+    color: #666;
 }
+
 /* HEADER */
-header {
+.header-container {
     background-color: #EAC926;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 
 .logo-mercadoliebre {
     width: 45%;
@@ -56,7 +66,7 @@ header {
     margin: 5px;
 }
 
-.magnifying-glass {
+.fa-solid.fa-magnifying-glass {
     width: 20px;
     height: 20px;
     margin: 0px 10px;
@@ -76,12 +86,13 @@ header {
     margin: 10px 80px;
 }
 
-.nav-bar a{
+.nav-bar a {
     font-size: 12px;
     text-decoration: none;
     color: black;
 }
-.nav-bar ul{
+
+.nav-bar ul {
     list-style: none;
 }
 
@@ -90,9 +101,10 @@ header {
 }
 
 .account-bar {
-   margin: 5px 5px 10px;
+    margin: 5px 5px 10px;
 }
-.burger-menu{
+
+.burger-menu {
     background-color: #1259c3;
     text-align: center;
     font-size: 30px;
@@ -101,26 +113,34 @@ header {
     color: white;
     border: solid 1px #1259c3;
     border-radius: 3px;
-    margin: 5px 200px;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.banner img {
+    width: 100vw;
 }
 
 /* FOOTER */
-footer{
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-footer section{
+
+footer section {
     margin-bottom: 20px;
     text-align: center;
 }
-footer i{
+
+footer i {
     color: #1259c3;
-   font-size: 2em;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.coppyright{
+.coppyright {
     text-align: left;
     color: #666;
     font-size: 12px;
@@ -128,51 +148,110 @@ footer i{
 
 
 /* MAIN */
-main{
+main {
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     width: 90vw;
-
 }
 
-article figure img{
-    width: 100%;
-    height: 100%;
+article figure img {
+    width: 100%
 }
-article{
-    margin: 10px;
-}
-.last-visit{
+
+
+.art-description {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.offers{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.art-description{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-.art{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: baseline;
+    border: solid 1px #ebebeb;
+    padding: 15px;
+    background-color: white;
+    position: relative;
 }
 
-.discount{
-    color:#39b54a;
-}
-.fa-solid.fa-truck{
+.discount {
     color: #39b54a;
+}
+
+.fa-solid.fa-truck {
+    color: #39b54a;
+    border: solid 1px #39b54a;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+
+/* MEDIA QUERIES */
+/* Navegación mobile (ancho maximo 361 px) */
+@media (max-width: 360px) {
+    header nav {
+        display: none;
+    }
+    .search-bar {
+        display: flex;
+        width: 50%;
+    }
+    .art{
+        margin: 10px;
+    }
+    .art-description {
+        display: none;
+    }
+}
+
+/* navegación en tablet (ancho mínimo 361 px) */
+@media (min-width:361px) {
+    /* .last-visit {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around;
+    }
+    /* .offers {
+        display: flex;
+        flex-wrap: wrap;
+    }  */
+    .art {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        margin: 10px ;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .burger-menu {
+        display: none
+    }
+}
+
+/* Navegación en desktop (ancho mínimo 769 px) */
+@media (min-width:769px) {
+    .last-visit {
+        display: flex;
+    
+        justify-content: space-around;
+       
+
+    }
+
+    .offers {
+        display: flex;
+        justify-content: space-around;
+
+    } 
+    .art {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none
+    }
 }
